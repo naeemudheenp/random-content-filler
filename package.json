@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "keywords": [],
   "type": "commonjs",
   "exports": {
@@ -33,7 +33,6 @@
   "dependencies": {
     "@strapi/design-system": "^2.0.0-rc.14",
     "@strapi/icons": "^2.0.0-rc.14",
-    "faker": "^6.6.6",
     "react-intl": "^7.0.1"
   },
   "devDependencies": {
@@ -59,12 +58,13 @@
   },
   "strapi": {
     "kind": "plugin",
-    "name": "Random content filler",
+    "name": "random-content-filler",
     "displayName": "",
     "description": ""
   },
-  "name": "@strapi/random-content-filler",
-  "description": "",
+  "name": "random-content-filler",
+  "description": "Random Content Filler  [Strapi]",
   "license": "MIT",
-  "author": "naeemudheen p <nayeemudheenaslam3@gmail.com>"
+  "author": "naeemudheen p <nayeemudheenaslam3@gmail.com>",
+  "main": "index.js"
 }
