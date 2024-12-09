@@ -1,0 +1,11 @@
+{
+  "extends": "@strapi/typescript-utils/tsconfigs/server",
+  "include": ["./src"],
+  "compilerOptions": {
+    "rootDir": "../",
+    "baseUrl": ".",
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "noEmitOnError": false, // Allow emitting files even when there's a type error
+    "strict": false
+  }
+}
