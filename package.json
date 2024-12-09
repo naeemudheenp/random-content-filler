@@ -63,7 +63,7 @@
     "displayName": "",
     "description": ""
   },
-  "name": "random-content-filler",
+  "name": "@strapi/random-content-filler",
   "description": "",
   "license": "MIT",
   "author": "naeemudheen p <nayeemudheenaslam3@gmail.com>"
