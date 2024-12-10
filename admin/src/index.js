@@ -5,12 +5,7 @@ import { FillRandomData } from './components/fill-data'
 
 export default {
   register(app) {
-    app
-      .getPlugin('content-manager')
-      .injectComponent('editView', 'right-links', {
-        name: 'random-text-filler',
-        Component: FillRandomData,
-      });
+
     app.registerPlugin({
       id: PLUGIN_ID,
       initializer: Initializer,
@@ -19,7 +14,14 @@ export default {
     });
   },
 
-  bootstrap(app) { },
+  bootstrap(app) {
+    app
+      .getPlugin('content-manager')
+      .injectComponent('editView', 'right-links', {
+        name: 'random-text-filler',
+        Component: FillRandomData,
+      });
+  },
 
   async registerTrads(app) {
     const { locales } = app;
