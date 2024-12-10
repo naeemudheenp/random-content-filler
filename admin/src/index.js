@@ -15,12 +15,10 @@ export default {
   },
 
   bootstrap(app) {
-    app
-      .getPlugin('content-manager')
-      .injectComponent('editView', 'right-links', {
-        name: 'random-text-filler',
-        Component: FillRandomData,
-      });
+    app.getPlugin("content-manager").apis.addEditViewSidePanel("editView", "right-links", {
+      name: "random-text-filler",
+      Component: FillRandomData
+    });
   },
 
   async registerTrads(app) {
