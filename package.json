@@ -67,6 +67,10 @@
     "displayName": "",
     "description": ""
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naeemudheenp/strapi-random-content-filler"
+  },
   "name": "strapi-random-content-filler",
   "description": "Random Content Filler  [Strapi]",
   "license": "MIT",
