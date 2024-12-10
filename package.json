@@ -1,5 +1,5 @@
 {
-  "version": "2.3.2",
+  "version": "1.0.0",
   "keywords": [],
   "type": "commonjs",
   "exports": {
@@ -58,11 +58,11 @@
   },
   "strapi": {
     "kind": "plugin",
-    "name": "random-content-filler",
+    "name": "strapi-random-content-filler",
     "displayName": "",
     "description": ""
   },
-  "name": "random-content-filler",
+  "name": "strapi-random-content-filler",
   "description": "Random Content Filler  [Strapi]",
   "license": "MIT",
   "author": "naeemudheen p <nayeemudheenaslam3@gmail.com>",

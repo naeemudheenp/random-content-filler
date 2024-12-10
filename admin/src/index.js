@@ -5,7 +5,6 @@ import { FillRandomData } from './components/fill-data'
 
 export default {
   register(app) {
-
     app.registerPlugin({
       id: PLUGIN_ID,
       initializer: Initializer,
@@ -28,14 +27,11 @@ export default {
         name: 'fill random data',
         Component: FillRandomData,
       });
-
     }
-
   },
 
   async registerTrads(app) {
     const { locales } = app;
-
     const importedTranslations = await Promise.all(
       locales.map((locale) => {
         return import(`./translations/${locale}.json`)
@@ -49,7 +45,6 @@ export default {
           }));
       })
     );
-
     return importedTranslations;
   },
 };
