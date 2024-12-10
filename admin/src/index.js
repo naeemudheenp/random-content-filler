@@ -24,10 +24,11 @@ export default {
           Component: FillRandomData,
         });
     } catch (error) {
-      app.getPlugin("content-manager").apis.addEditViewSidePanel("editView", "right-links", {
-        name: "random-text-filler",
-        Component: FillRandomData
+      app.injectContentManagerComponent('editView', 'right-links', {
+        name: 'fill random data',
+        Component: FillRandomData,
       });
+
     }
 
   },
