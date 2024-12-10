@@ -1,6 +1,11 @@
 {
   "version": "1.0.0",
-  "keywords": [],
+  "keywords": [
+    "strapi",
+    "Random content generator",
+    "content filler",
+    "strapi v5"
+  ],
   "type": "commonjs",
   "exports": {
     "./package.json": "./package.json",
