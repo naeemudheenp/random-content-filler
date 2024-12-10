@@ -12,13 +12,24 @@ export default {
       isReady: false,
       name: PLUGIN_ID,
     });
+
   },
 
   bootstrap(app) {
-    app.getPlugin("content-manager").apis.addEditViewSidePanel("editView", "right-links", {
-      name: "random-text-filler",
-      Component: FillRandomData
-    });
+    try {
+      app
+        .getPlugin('content-manager')
+        .injectComponent('editView', 'right-links', {
+          name: 'random-text-filler',
+          Component: FillRandomData,
+        });
+    } catch (error) {
+      app.getPlugin("content-manager").apis.addEditViewSidePanel("editView", "right-links", {
+        name: "random-text-filler",
+        Component: FillRandomData
+      });
+    }
+
   },
 
   async registerTrads(app) {
