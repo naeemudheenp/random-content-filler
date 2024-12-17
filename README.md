@@ -16,6 +16,18 @@ npm install strapi-random-content-filler
 2. Goto content manager screen.  
 3. Click on ``` Fill Random Data ```  button to fill all fields with random data.  
 
+## How to Disable a Plugin in Strapi
+
+To disable a plugin in Strapi, update the configuration file. Add the following code to your `plugins.ts` or `plugins.js` file:
+
+```javascript
+"random-content-filler": {
+  config: {
+    enabled: true,
+  },
+},
+```
+
 
 ## Flow
 
