@@ -3,6 +3,8 @@ import { PLUGIN_ID } from './pluginId';
 import { Initializer } from './components/Initializer';
 import { FillRandomData } from './components/fill-data'
 
+
+
 export default {
   register(app) {
     app.registerPlugin({
@@ -11,6 +13,7 @@ export default {
       isReady: false,
       name: PLUGIN_ID,
     });
+
 
   },
 

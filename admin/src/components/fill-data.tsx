@@ -1,12 +1,41 @@
 import { Button } from '@strapi/design-system';
+import { useEffect, useState } from 'react';
 
 export function FillRandomData() {
+  const [configs, setConfigs] = useState({ enabled: true });
   const generateRandomData = () => {
     return {
       title: 'Random Title ' + Math.random().toString(36).substring(7),
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     };
   };
+  useEffect(() => {
+    const fetchConfigs = async () => {
+      try {
+        const response = await fetch('/random-content-filler/get-configs', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+
+        if (Object.keys(data).length != 0) setConfigs(data);
+      } catch (error) {
+        console.error('Error fetching configs:', error);
+      }
+    };
+
+    fetchConfigs();
+  }, []);
+
+  if (!configs.enabled) {
+    return;
+  }
   return (
     <Button
       onClick={async () => {
