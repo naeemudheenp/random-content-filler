@@ -2,12 +2,12 @@
 
 const myController = ({ strapi }) => ({
   index(ctx) {
-    ctx.body = strapi.plugin('my-strapi-plugin').service('myService').getWelcomeMessage();
+    ctx.body = strapi.plugin('random-content-filler').service('myService').getWelcomeMessage();
   },
 
   configs(ctx) {
     console.log('called configs');
-    ctx.body = strapi.plugin('my-strapi-plugin').service('myService').getConfigs();
+    ctx.body = strapi.plugin('random-content-filler').service('myService').getConfigs();
   },
 });
 

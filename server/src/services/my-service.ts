@@ -7,7 +7,7 @@ const myService = ({ strapi }: { strapi: Core.Strapi }) => ({
     return 'Welcome to Strapi 🚀';
   },
   getConfigs() {
-    return strapi.config.get('plugin.my-strapi-plugin');
+    return strapi.config.get('plugin.random-content-filler');
   },
 });
 
