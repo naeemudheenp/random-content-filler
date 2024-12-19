@@ -1,6 +1,7 @@
+
 'use strict';
 
-const myController = ({ strapi }) => ({
+module.exports = ({ strapi }) => ({
   index(ctx) {
     ctx.body = strapi.plugin('random-content-filler').service('myService').getWelcomeMessage();
   },
@@ -10,5 +11,3 @@ const myController = ({ strapi }) => ({
     ctx.body = strapi.plugin('random-content-filler').service('myService').getConfigs();
   },
 });
-
-export default myController;

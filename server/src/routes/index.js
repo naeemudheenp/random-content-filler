@@ -1,13 +1,4 @@
-export default [
-  {
-    method: 'GET',
-    path: '/',
-    // name of the controller file & the method.
-    handler: 'controller.index',
-    config: {
-      policies: [],
-    },
-  },
+module.exports = [
   {
     method: 'GET',
     path: '/',
@@ -21,7 +12,6 @@ export default [
     path: '/get-configs',
     handler: 'myController.configs',
     config: {
-      auth: false,
       policies: [],
     },
   },
